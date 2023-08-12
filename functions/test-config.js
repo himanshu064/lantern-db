@@ -1,0 +1,16 @@
+require('dotenv').config()
+
+const CONFIG_OBJ_TEST_CASES = {
+  ACCESS_TOKEN: process.env.ACCESS_TOKEN,
+  WALLET_ID: process.env.WALLET_ID,
+  BASE_URL: process.env.BASE_URL,
+  CLIENT_ID: process.env.CLIENT_ID,
+  CLIENT_SECRET: process.env.CLIENT_SECRET,
+  REFRESH_TOKEN: process.env.REFRESH_TOKEN,
+  EMAIL_PROVIDER: process.env.EMAIL_PROVIDER,
+  PORTFOLIO_ID: process.env.PORTFOLIO_ID,
+  TEST_CASES_ADDRESS: process.env.TEST_CASES_ADDRESS,
+  TEST_SLACK_WEBHOOK_ADDRESS: process.env.TEST_SLACK_WEBHOOK_ADDRESS
+}
+
+module.exports = CONFIG_OBJ_TEST_CASES
