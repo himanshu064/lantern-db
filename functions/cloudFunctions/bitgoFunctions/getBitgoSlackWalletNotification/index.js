@@ -1,11 +1,11 @@
-const { BITGO_PATH, API_CALLS } = require('../../../constants')
-const { WALLET_ID } = require('../../../test-config')
+// const { BITGO_PATH, API_CALLS } = require('../../../constants')
+// const { WALLET_ID } = require('../../../test-config')
 const {
   cloudFunctionsStartUp,
-  validateRequest,
+  // validateRequest,
   // validateParameters,
   // validateCoinParameters,
-  axiosCall
+  // axiosCall
 } = require('../../../helpers/generalHelpers')
 
 const { sendSlackMessage } = require('../../../utils/sendSlackMessage')
@@ -46,7 +46,7 @@ exports.getBitgoSlackWalletNotification = cloudFunctionsStartUp(
     //   res.send({ result })
     // }
     // res.send({ result })
-    let slackResponse = await sendSlackMessage('Some demo message')
+    const slackResponse = await sendSlackMessage('Some demo message')
     res.send({ response: slackResponse })
   }
 )
