@@ -1,7 +1,7 @@
 // const { BITGO_PATH, API_CALLS } = require('../../../constants')
 // const { WALLET_ID } = require('../../../test-config')
 const {
-  cloudFunctionsStartUp,
+  cloudFunctionsStartUp
   // validateRequest,
   // validateParameters,
   // validateCoinParameters,
