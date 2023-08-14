@@ -1,14 +1,14 @@
-// const { BITGO_PATH, API_CALLS } = require('../../../constants')
-// const { WALLET_ID } = require('../../../test-config')
+const { BITGO_PATH, API_CALLS } = require('../../../constants');
+const { WALLET_ID } = require('../../../test-config');
 const {
-  cloudFunctionsStartUp
-  // validateRequest,
-  // validateParameters,
-  // validateCoinParameters,
-  // axiosCall
-} = require('../../../helpers/generalHelpers')
+  cloudFunctionsStartUp,
+  validateRequest,
+  validateParameters,
+  validateCoinParameters,
+  axiosCall,
+} = require('../../../helpers/generalHelpers');
 
-const { sendSlackMessage } = require('../../../utils/sendSlackMessage')
+const { sendSlackMessage } = require('../../../utils/sendSlackMessage');
 
 // const BitGo = require('bitgo')
 // const bitgo = new BitGo({ env: 'test' })
@@ -46,7 +46,31 @@ exports.getBitgoSlackWalletNotification = cloudFunctionsStartUp(
     //   res.send({ result })
     // }
     // res.send({ result })
-    const slackResponse = await sendSlackMessage('Some demo message')
-    res.send({ response: slackResponse })
+
+    // if (!validateRequest(req, 'GET', res)) return;
+
+    // try {
+    //   const path = `${BITGO_PATH}/api/v2/gteth/wallet/${WALLET_ID}`;
+    //   const result = await axiosCall(API_CALLS.GET, path); // Assuming axiosCall is defined somewhere
+    //   console.log('API Call Result:', result);
+
+    //   if (result) {
+    //     const slackResponse = await sendSlackMessage('Some demo message');
+    //     console.log('Slack Response:', slackResponse);
+    //     res.send({ response: slackResponse });
+    //   }
+    // } catch (error) {
+    //   console.error('Error:', error);
+    //   res.status(500).send({ error: 'An error occurred' }); // Adjust the response status and message as needed
+    // }
+    // if (!validateRequest(req, 'GET', res)) return;
+    try {
+      // You can directly send the Slack message here
+      await sendSlackMessage('Some demo message');
+      res.send({ response: 'Slack messge send successfully' });
+    } catch (error) {
+      console.error('Error:', error);
+      res.status(500).send({ error: 'An error occurred' }); // Adjust the response status and message as needed
+    }
   }
-)
+);
