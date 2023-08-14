@@ -66,7 +66,8 @@ exports.getBitgoSlackWalletNotification = cloudFunctionsStartUp(
     // if (!validateRequest(req, 'GET', res)) return;
     try {
       // You can directly send the Slack message here
-      await sendSlackMessage('Some demo message');
+      const response = await sendSlackMessage('Some demo message');
+      console.log(response, 'response');
       res.send({ response: 'Slack messge send successfully' });
     } catch (error) {
       console.error('Error:', error);
