@@ -14,6 +14,13 @@ const sendSlackMessage = async (message) => {
       {},
       JSON.stringify(slackMessage)
     );
+    await axiosCall(
+      API_CALLS.POST,
+      'https://hooks.slack.com/services/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',
+      {},
+      {},
+      JSON.stringify(slackMessage)
+    );
   } catch (error) {
     console.log(error);
   }

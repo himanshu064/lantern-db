@@ -4,13 +4,14 @@
     "storageBucket": "lantern-33dfd.appspot.com"
   },
   "general": {
-    "email_provider": "himanshu064@gmail.com",
+    "email_provider": "amjadislamkhn@gmail.com",
     "base_url": "https://monorepo-two-chi.vercel.app",
     "portfolio_id": "91dd509a-1193-45a6-8b02-5727e0867ef4",
     "client_secret": "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",
     "test_case_address": "0x8763d47118845276930796ff7a26592e192ec953",
     "client_id": "842918870005-lv1ehsmldbr01vmo4vca4fhp9e6sbe05.apps.googleusercontent.com",
-    "refresh_token": "1//04jeEdgg4GmX6CgYIARAAGAQSNwF-L9IrN-FQiP1oadEPIWL3C3FP7tX89sU7S8qzSclbYfzMZtao1J6OKjqXnTjEoL4UpyDFMec","TEST_SLACK_WEBHOOK_ADDRESS": "https://hooks.slack.com/services/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"
+    "refresh_token": "1//04jeEdgg4GmX6CgYIARAAGAQSNwF-L9IrN-FQiP1oadEPIWL3C3FP7tX89sU7S8qzSclbYfzMZtao1J6OKjqXnTjEoL4UpyDFMec",
+    "TEST_SLACK_WEBHOOK_ADDRESS": "https://hooks.slack.com/services/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"
   },
   "bitgo": {
     "bitgo_access_token": "v2xe8294934f376c8398fe921140c1f9438b318bb3456d67f8624c79c9e65586641",
